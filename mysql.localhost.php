@@ -1,4 +1,15 @@
-<form name="file_upload" method="POST" action="form.php" enctype="multipart/form-data">
-  <label>Ваш аватар: <input type="file" name="avatar"></label>
-  <input type="submit" name="send" value="Отправить файл">
+<?php
+require_once'mysql.localhost.php';
+?>
+<form action="insert_brand.php" method="GET">
+Маршрут:<input type="text" name="Namemarsh"><br>
+<input type="submit" name="submit" value="Ввод"><br>
 </form>
+<?php
+if($_GET['submit'])
+{
+	$result=mysqli_query($link,"INSERT HIGH_PRIORITY INTO brand(  id_brand, brand)
+  VALUES (0, '$_GET[Namemarsh]')");
+
+}
+?>

@@ -8,6 +8,7 @@ require_once'mysql.localhost.php';
 <?php
 if($_GET['submit'])
 {
+	
 	$result=mysqli_query($link,"SELECT
   brand.brand,
   product.model,
@@ -38,3 +39,5 @@ foreach ($rows as $row)
 echo '</table>';
 }
 ?>
+<?php
+

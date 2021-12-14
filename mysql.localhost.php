@@ -1,4 +1,5 @@
 <?php
+
 require_once'mysql.localhost.php';
 ?>
 <form action="insert_brand.php" method="GET">
